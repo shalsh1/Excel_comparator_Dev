@@ -279,6 +279,7 @@ def get_file_path(default_path, file_type):
     
 def main():
     """Main function."""
+    os.system("title 'Excel Comparator Tool'")  # Set console title (Windows)
     print("\n" + "="*100)
     print("\033[96mExcel File Comparator Tool\033[0m")
     print("\033[90mAuthor: Shreyes Shalgar\033[0m")
@@ -307,20 +308,20 @@ def main():
         if comparator.differences:
             export_choice = input("\nWould you like to export differences? (yes/no): ").strip().lower()
             if export_choice in ['yes', 'y']:
-                format_choice = input("Export format - (1) CSV or (2) Excel? (1/2): ").strip()
+                format_choice = input("Export format - (1) Excel or (2) CSV? (1/2): ").strip()
                 output_file = input("Enter output filename (default: differences): ").strip()
                 
                 if not output_file:
                     output_file = "differences"
                 
                 if format_choice == '2':
-                    if not output_file.endswith('.xlsx'):
-                        output_file += '.xlsx'
-                    comparator.export_to_excel(output_file)
-                else:
                     if not output_file.endswith('.csv'):
                         output_file += '.csv'
                     comparator.export_to_csv(output_file)
+                else:
+                    if not output_file.endswith('.xlsx'):
+                        output_file += '.xlsx'
+                    comparator.export_to_excel(output_file)
     except Exception as e:
         print(f"\033[91m✗ Error during comparison: {e}\033[0m")
         sys.exit(1)
