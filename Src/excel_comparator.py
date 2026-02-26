@@ -303,7 +303,7 @@ def main():
     try:
         comparator = ExcelComparator(file1, file2)
         comparator.compare()
-        
+        input("\nPress Enter to continue...")
         # Ask if user wants to export results
         if comparator.differences:
             export_choice = input("\nWould you like to export differences? (yes/no): ").strip().lower()

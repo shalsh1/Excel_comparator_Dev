@@ -1,5 +1,5 @@
 REM Change to the development directory
-cd c:\Users\shalsh1\Downloads\My_Tools\Excel comparator\Excel_comparator_Dev\
+cd /d "%~dp0.."
 
 REM Build the Python script into a standalone executable using PyInstaller
 c:\Data\MKS\BB400_POWERPACK\40_SW\90_Tools\Python311\python.exe -m PyInstaller --onefile .\src\excel_comparator.py
