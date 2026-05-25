@@ -12,8 +12,7 @@ from openpyxl.utils import get_column_letter
 import sys
 import os
 from pathlib import Path
-
-
+from version import __version__ as VERSION
 class ExcelComparator:
     def __init__(self, file1_path, file2_path):
         """Initialize the comparator with two Excel files."""
@@ -479,7 +478,7 @@ def main():
     os.system("title 'Excel Comparator Tool'" if os.name == 'nt' else "")
     
     print(f"\033[1;96m{'█'*100}\033[0m")
-    print(f"\033[1;96m  Excel File Comparator Tool\033[0m")
+    print(f"\033[1;96m  Excel File Comparator Tool v{VERSION}\033[0m")
     print(f"\033[90m  Author: Shreyes Shalgar\033[0m")
     print(f"\033[1;96m{'█'*100}\033[0m\n")
     

@@ -1,3 +1,5 @@
 /.vscode
 *cwd
 *.xlsx
+*.pyc
+*.code-workspace

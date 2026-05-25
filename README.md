@@ -23,6 +23,31 @@ A comprehensive Python tool for comparing two Excel files cell-by-cell and ident
 
 See `requirements.txt` for complete dependencies.
 
+## Versioning
+
+This project follows **[Semantic Versioning 2.0.0](https://semver.org/)**
+
+Version format: `MAJOR.MINOR.PATCH`
+
+- **MAJOR**: Incompatible API changes
+- **MINOR**: New functionality (backward-compatible)
+- **PATCH**: Bug fixes (backward-compatible)
+
+Current Version: **0.2.0**
+
+### Checking Version
+
+```python
+# Check version in Python
+from Src.version import __version__
+print(__version__)  # Output: 0.2.0
+```
+
+Or from command line:
+```bash
+python Src/version.py
+```
+
 ## Installation
 
 1. Clone or download the project
