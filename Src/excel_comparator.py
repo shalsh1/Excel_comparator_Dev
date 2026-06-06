@@ -208,6 +208,12 @@ class ExcelComparator:
         print(f"  📍 Cell: {diff['cell']} (Row {diff['row']}, Column {get_column_letter(diff['column'])})")
         print(f"  🏷️  Header (File 1): {repr(diff['header_value1'])}")
         print(f"  🏷️  Header (File 2): {repr(diff['header_value2'])}")
+        # @Todo - Add logic to block the error name if the excel is not error table.
+        if((repr(diff['d_value1'])) == (repr(diff['d_value2']))):
+            print(f"  🏷️  Error Name (File 1 & 2): {(repr(diff['d_value1'])}")
+        else:
+            print(f"  🏷️  Error Name (File 1): {(repr(diff['d_value1'])}")
+            print(f"  🏷️  Error Name (File 2): {(repr(diff['d_value2'])}")
         print()
         print(f"  \033[92m{self.file1_name}\033[0m Value: {repr(diff['file1_value'])}")
         print(f"  \033[94m{self.file2_name}\033[0m Value: {repr(diff['file2_value'])}")
